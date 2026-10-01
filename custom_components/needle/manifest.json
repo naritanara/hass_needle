@@ -1,0 +1,13 @@
+{
+    "domain": "needle",
+    "name": "Needle",
+    "codeowners": ["@naritanara"],
+    "config_flow": true,
+    "documentation": "https://github.com/naritanara/hass_needle",
+    "integration_type": "service",
+    "iot_class": "local_push",
+    "issue_tracker": "https://github.com/naritanara/hass_needle/issues",
+    "loggers": ["custom_components.needle"],
+    "requirements": ["cactus-needle~=3.0.0"],
+    "version": "0.1.0"
+}
