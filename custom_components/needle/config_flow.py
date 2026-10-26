@@ -1,4 +1,4 @@
-"""Adds config flow for Blueprint."""
+"""Adds config flow for Needle."""
 
 from __future__ import annotations
 
@@ -44,9 +44,7 @@ class NeedleConfigFlow(ConfigFlow, domain=DOMAIN):
             data={},
         )
 
-    async def async_on_create_entry(
-        self, result: ConfigFlowResult
-    ) -> ConfigFlowResult:
+    async def async_on_create_entry(self, result: ConfigFlowResult) -> ConfigFlowResult:
         """Trigger the options flow after the config entry is created."""
         if "result" not in result:
             warnings.warn("missing result in config flow result", stacklevel=2)
@@ -106,8 +104,6 @@ class NeedleOptionsFlow(OptionsFlow):
                             CONF_LLM_HASS_API
                         )
                     },
-                ): SelectSelector(
-                    SelectSelectorConfig(options=apis, multiple=True)
-                )
+                ): SelectSelector(SelectSelectorConfig(options=apis, multiple=True))
             }
         )
